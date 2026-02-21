@@ -1,0 +1,149 @@
+
+a {
+    color:white;
+}
+
+a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+.column {
+    margin-top: 1em;
+}
+
+#h4 {
+    opacity: 1;
+    color: white;
+}
+
+h5 {
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
+
+/* NAVIGATION */ 
+
+.navbar-dark li a {
+    color: white !important;
+}
+
+.navbar-toggler {
+    position: relative;
+    left:-40px;
+}
+
+
+.top-bar {
+    margin-top: -24px;
+    opacity: 0.6;
+    background-color: #e3a92b;
+    color: white;
+}
+        
+#user-icon {
+    position: relative; 
+    right:0;
+    top:0;    
+}        
+
+.top-bar ul {
+    background-color: #f690bd;
+}
+
+.readableLogo {
+    width: 100px;
+}
+
+.menu li {
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}
+
+.menu-text h5 {
+    display: inline-block;
+    position: relative;
+    top:20px;
+}
+
+.avatar-img {
+    margin: 20px !important;
+    opacity: 1;
+}
+       
+
+/* HOME PAGE */
+
+#books {
+     opacity: 1;
+}
+  
+.navItem {
+    background-color: #e3a92b;
+}
+
+#link1 li, #link2 li, #link3 li {
+    display: inline-block;
+    background-color: #80d4c9;
+ }
+
+.btn {
+    opacity: 1;
+    color: white;
+}
+
+.input-group mb-3 { 
+    width: auto;
+}
+
+
+/* Book Search Results */
+
+.book-author {
+    font-size: 0.7em;
+    text-align: center;
+}
+
+.book-title {
+    font-size: 1em;
+    text-align: center;
+}
+
+.book-div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.read-btns {
+    display:block;
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#books-read li, #books-reading li, #books-to-read li {
+    list-style: none;
+    max-width:400px !important;
+    margin: auto;
+}
+
+
+#books-read input, #books-reading input, #books-to-read input {
+    background-color: red;
+    color:white;
+    padding: 0.5em;
+    border: none;
+}
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom:0;
+}
+
+.index-footer {
+    position: relative;
+    top:0;
+}
