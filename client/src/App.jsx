@@ -144,7 +144,7 @@ export default function App() {
 
   function addBook(shelf, book) {
     setLists((current) => current[shelf].some((saved) => saved.id === book.id) ? current : { ...current, [shelf]: [...current[shelf], book] });
-    toast.success("Book added to the shelf!", { position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined });
+    toast.success("Book added to the shelf.", { position: "top-right", autoClose: 2000, hideProgressBar: false, closeOnClick: true, pauseOnHover: true, draggable: true, progress: undefined });
   }
   function removeBook(shelf, id) {
     setLists((current) => ({ ...current, [shelf]: current[shelf].filter((book) => book.id !== id) }));
