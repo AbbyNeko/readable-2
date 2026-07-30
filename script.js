@@ -83,8 +83,16 @@ $(document).ready(function(){
    $("#myform").submit(function(evt){
 
       evt.preventDefault();
-   	  var search = $("#books").val();
-   	  if(search == ""){}else{		
+      var search = $("#books").val().trim();
+
+      if (search === "") {
+        $("#search-error").text("Enter a book title to search.");
+        $("#books").focus();
+        return;
+      }
+
+      $("#search-error").text("");
+
    	  var url = "";
    	  var img = "";
       var title = "";
@@ -94,7 +102,7 @@ $(document).ready(function(){
       //empties result div
       $("#result").empty();
 
-   	  $.get("https://www.googleapis.com/books/v1/volumes?q=" + search,function(response){
+      $.get("https://www.googleapis.com/books/v1/volumes?q=" + search + "&key="+ process.env.GOOGLE_BOOKS_API_KEY,function(response){
 
           for(i=0;i<response.items.length;i++)
           {
@@ -162,7 +170,6 @@ $(document).ready(function(){
          //clears search input
          $("#books").val("");
       
-      }
       return false;
    });
 

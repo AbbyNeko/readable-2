@@ -36,6 +36,25 @@ blockquote.blockquote {
     margin: 2rem auto;
 }
 
+.search-error {
+    display: none;
+    width: 100%;
+    margin: 0.65rem 0 0;
+    padding: 0.55rem 0.75rem;
+    border-left: 4px solid #b4233d;
+    border-radius: 0.25rem;
+    background-color: #fff1f3;
+    color: #b4233d;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.35;
+    text-align: left;
+}
+
+.search-error:not(:empty) {
+    display: block;
+}
+
 /* NAVIGATION */
 
 .top-bar.navbar {

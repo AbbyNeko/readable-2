@@ -68,10 +68,14 @@
               <div class="row large-12 columns">
                 <form id="book-search-form" class="search-form">
                   <label for="books">Search for a book:</label>
+                  
                 <div class="input-field">
-                  <input type="search" id="books">
+                  <input type="search" id="books" aria-describedby="search-error">
                 </div>
-                <button class="btn button primary">Search Books</button>  
+              
+                <button class="btn button primary">Search Books</button>
+
+                <p id="search-error" class="search-error" role="alert"></p>
                 </form>
               </div>
               
