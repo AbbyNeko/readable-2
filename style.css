@@ -1,4 +1,13 @@
 
+html,
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 a {
     color:white;
 }
@@ -22,60 +31,171 @@ h5 {
     margin-top: 0.5em;
 }
 
-/* NAVIGATION */ 
-
-.navbar-dark li a {
-    color: white !important;
+blockquote.blockquote {
+    width: min(90%, 760px);
+    margin: 2rem auto;
 }
 
-.navbar-toggler {
-    position: relative;
-    left:-40px;
+/* NAVIGATION */
+
+.top-bar.navbar {
+    min-height: 76px;
+    margin-top: 0;
+    padding: 0.65rem clamp(1rem, 4vw, 3rem);
+    background-color: #bd6b87;
+    box-shadow: 0 3px 14px rgba(72, 35, 53, 0.2);
+    color: #fff;
 }
 
-
-.top-bar {
-    margin-top: -24px;
-    opacity: 0.6;
-    background-color: #e3a92b;
-    color: white;
+.menu-text {
+    flex: 0 0 auto;
 }
-        
-#user-icon {
-    position: relative; 
-    right:0;
-    top:0;    
-}        
 
-.top-bar ul {
-    background-color: #f690bd;
+.menu-text a {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #fff;
 }
 
 .readableLogo {
-    width: 100px;
-}
-
-.menu li {
-    padding-left: 1.3em;
-    padding-right: 1.3em;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
 }
 
 .menu-text h5 {
-    display: inline-block;
-    position: relative;
-    top:20px;
+    margin: 0;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+}
+
+.navbar-dark .navbar-toggler {
+    margin-left: auto;
+    padding: 0.35rem 0.5rem;
+    border-color: rgba(255, 255, 255, 0.65);
+}
+
+.navbar-dark .navbar-toggler:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.18rem rgba(255, 255, 255, 0.3);
+}
+
+.top-bar .navbar-collapse {
+    align-items: center;
+}
+
+.top-bar .menu {
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    gap: 0.2rem;
+}
+
+.top-bar .navItem {
+    padding: 0;
+    background: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    margin: 0.15rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 999px;
+    color: rgba(255, 255, 255, 0.92) !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    background: rgba(255, 255, 255, 0.18);
+    color: #fff !important;
+    transform: translateY(-1px);
+}
+
+.navbar-dark .navbar-nav .nav-link[aria-current="page"] {
+    background: #fff;
+    color: #914e6e !important;
+    box-shadow: 0 2px 7px rgba(72, 35, 53, 0.16);
+}
+
+#user-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0.75rem;
+    color: #fff;
+    font-size: 0.88rem;
+    white-space: nowrap;
 }
 
 .avatar-img {
-    margin: 20px !important;
-    opacity: 1;
+    order: -1;
+    width: 42px !important;
+    height: 42px;
+    margin: 0 !important;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(72, 35, 53, 0.24);
+    object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+    .top-bar.navbar {
+        min-height: 68px;
+    }
+
+    .top-bar .navbar-collapse {
+        width: 100%;
+        margin-top: 0.7rem;
+        padding-top: 0.55rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .top-bar .menu {
+        width: 100%;
+        gap: 0.1rem;
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        margin: 0.1rem 0;
+        padding: 0.6rem 0.7rem;
+        border-radius: 0.45rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .menu-text h5 {
+        font-size: 0.84rem;
+    }
+
+    .readableLogo {
+        width: 40px;
+        height: 40px;
+    }
 }
        
 
 /* HOME PAGE */
 
+#myform {
+    width: min(90%, 600px);
+    margin: 2rem auto;
+}
+
 #books {
      opacity: 1;
+}
+
+label {
+    font-size: 1.2rem;
+    margin-right:0.5em;
 }
   
 .navItem {
@@ -139,11 +259,13 @@ h5 {
 /* FOOTER */
 
 .footer {
-    position: absolute;
-    bottom:0;
+    position: static;
+    width: 100%;
+    margin-top: auto;
 }
 
 .index-footer {
-    position: relative;
-    top:0;
+    position: static;
+    width: 100%;
+    margin-top: auto;
 }

@@ -52,7 +52,8 @@ function updateUserIcon(){
         svg.addClass("avatar-img");
         svg.attr("src", gravatarImage);
         svg.attr("alt", "avatar");
-        svg.attr("width", "70em");
+        svg.attr("width", "42");
+        svg.attr("height", "42");
         $("#user-icon").append(svg);
 
     } else {
@@ -65,7 +66,8 @@ function updateUserIcon(){
             svg.addClass("avatar-img");
             svg.attr("src", gravatarImage);
             svg.attr("alt", "avatar");
-            svg.attr("width", "70em");
+            svg.attr("width", "42");
+            svg.attr("height", "42");
             $("#user-icon").append(svg);
 
         localStorage.setItem("userIcon", randomIdentifier);
