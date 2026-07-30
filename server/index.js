@@ -53,6 +53,4 @@ app.get("/api/books", async (request, response) => {
 app.use(express.static(clientDirectory));
 app.get("*", (_request, response) => response.sendFile(path.join(clientDirectory, "index.html")));
 
-app.listen(port, () => {
-  console.log(`Readable is running at http://localhost:${port}`);
-});
+export const handler = serverless(app);
