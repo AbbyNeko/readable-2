@@ -3,7 +3,7 @@
   publish = "client/dist"
 
 [functions]
-  external_node_modules = ["express"]
+  external_node_modules = ["express", "node:path", "node.url"]
   node_bundler = "esbuild"
 
 [[redirects]]
