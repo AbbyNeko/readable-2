@@ -14,12 +14,13 @@
     "start": "node server/index.js"
   },
   "dependencies": {
-    "@netlify/vite-plugin": "^2.12.9",
+    "@netlify/vite-plugin": "^2.1.4",
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-toastify": "^11.1.0"
+    "react-toastify": "^11.1.0",
+    "serverless-http": "^4.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
@@ -27,6 +28,7 @@
     "vite": "^7.0.0"
   },
   "allowScripts": {
-    "@netlify/vite-plugin@2.12.9": true
+    "@netlify/vite-plugin@2.12.9": true,
+    "serverless-http@4.0.0": true
   }
 }
