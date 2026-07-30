@@ -1,13 +1,11 @@
 import "dotenv/config";
 import express from "express";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import serverless from "serverless-http";
 
 const app = express();
-const port = process.env.PORT || 3001;
-const rootDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const clientDirectory = path.join(rootDirectory, "client", "dist");
+const router = Router();
 
+const port = process.env.PORT || 3001;
 app.get("/api/books", async (request, response) => {
   const query = request.query.q?.trim();
 
@@ -50,9 +48,6 @@ app.get("/api/books", async (request, response) => {
   }
 });
 
-app.use(express.static(clientDirectory));
-app.get("*", (_request, response) => response.sendFile(path.join(clientDirectory, "index.html")));
+app.use("/api/", router);
 
-app.listen(port, () => {
-  console.log(`Readable is running at http://localhost:${port}`);
-});
+export const handler = serverless(app);
